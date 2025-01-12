@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@10;0..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Young+Serif&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  background-color: #f1f5f8;
+}
+
+/* Header section start from here */
+.header {
+  width: 95vw;
+  max-width: 1170px;
+  margin: 0rem auto;
+  margin-top: 6rem;
+  text-align: center;
+}
+.header .line {
+  display: inline-block;
+  width: 5rem;
+  height: 0.25rem;
+  background-color: #c59d5f;
+}
+.nav-bar {
+  margin: 0rem auto;
+  margin-top: 1.5rem;
+}
+.button {
+  padding: 0.3rem 0.7rem;
+  font-weight: 400;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px groove #c59d5f;
+  color: #c59d5f;
+  transition: background-color 0.5s, color 0.5s;
+  margin-left: 1rem;
+}
+.button:hover {
+  background-color: #c59d5f;
+  color: #ffffff;
+}
+/* Header section end from here */
+
+
+/*Main content start from here*/
+.main-content {
+  max-width: 1300px;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 2rem;
+}
+.menu-item-card {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 0rem 0.25rem;
+}
+.item-image {
+  width: 100%;
+  border: 5px solid #c59d5f;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center center;
+}
+.price-name {
+  display: flex;
+  justify-content: space-between;
+}
+.price-name .item-name {
+  letter-spacing: 0.25rem;
+  font-size: 1rem;
+}
+.price-name .item-price {
+  letter-spacing: 0.25rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #c59d5f;
+}
+.text-content {
+  padding: 1rem;
+}
+.text-content .underline {
+  margin-top: 0.5rem;
+  height: 1px;
+  background-color: rgb(171, 170, 170);
+}
+.text-content .paragraph {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: grey;
+}
+/*Main content end from here*/
+
+@media (max-width: 1200px) {
+  .main-content {
+  grid-template-columns: repeat(1, 1fr);
+  width: 95vw;
+  justify-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .menu-item-card {
+    width: 95%;
+    grid-template-columns:  1fr;
+  }
+  .text-content .paragraph {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .button {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 265px) {
+  .nav-bar {
+    width: 50%;
+  }
+}
